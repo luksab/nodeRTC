@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>chat</title>
+    <meta charset="UTF-8">
+    <script src="wsLib.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="layout.css" />
+</head>
+
+<body>
+    <div class="site">
+        <div id="title" class="outer">
+            Welcome <a id="userName"></a>
+            <div id="topRight">
+                <button id="logout">logout</button>
+                <button id="deleteAcount">Delete Acount</button>
+            </div>
+        </div>
+        <div id="search" class="outer">
+            <input id="searchBar" type="text"><button id="searchButton">🔍</button>
+        </div>
+        <div id="profile" class="inner">
+            <a id="profileName"></a>'s profile
+            <button id="friend">add as friend</button>
+            <button id="refresh">refresh feed</button>
+        </div>
+        <div id="friends" class="outer">
+            Friends:
+            <div id="friendsList">
+                Add friends to see links to their profile here
+            </div>
+            </br>
+            Achievments:
+            <div id="achievments"></div>
+        </div>
+        <div id="content" class="inner">
+            <video autoplay class="remote-video" id="remote-video"></video>
+            <video autoplay muted class="local-video" id="local-video"></video>
+        </div>
+        <div id="post" class="inner">
+            <textarea id="textarea" cols="50" rows="10"></textarea>
+            <button id="send">post</button>
+        </div>
+    </div>
+</body>
+
+</html>

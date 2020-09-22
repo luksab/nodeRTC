@@ -1,0 +1,100 @@
+:root {
+    --main-color: white;
+    --secondary-color: lightblue;
+    --trim-color: blue;
+    --trim-width: 5px;
+  }
+  .site{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    overflow: hidden;
+    display:grid;
+    grid-template-columns: 15em 1fr;
+    grid-auto-rows: 2em 2em 1fr auto;
+    grid-template-areas:
+      "title title"
+      "search profile"
+      "friends content"
+      "friends post"
+  }
+  .inner{
+    background-color: var(--secondary-color);
+    border-width: var(--trim-width);
+    border-color: var(--trim-color);
+  }
+  .outer{
+    background-color: var(--main-color);
+    padding-left: 1em;
+  }
+  #profile{
+    grid-area: profile;
+    border-left-style: solid;
+    border-top-style: solid;
+    border-top-left-radius: var(--trim-width);;
+  }
+  #search{
+    grid-area: search;
+  }
+  #title{
+    grid-area: title;
+    padding-top: 0.5em;
+  }
+  #friends{
+    grid-area: friends;
+  }
+  #friends button{
+    display: block;
+    width: 90%;
+  }
+  #content{
+    grid-area: content;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-left-style: solid;
+  }
+  #post{
+    grid-area: post;
+    border-left-style: solid;
+  }
+  .container{
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-left-color: var(--trim-color);;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--main-color);
+    padding: 5px;
+    margin: 5px;
+  }
+  #topRight{
+    position: absolute;
+    right:0;
+    top:0;
+  }
+  #friendsList{
+    display: block;
+  }
+  textarea{
+    width: 100%;
+    margin-bottom: -4px;
+    bottom: 0;
+  }
+  #send{
+    position: absolute;
+    bottom: 0;
+    right:0;
+  }
+  #searchButton{
+    position: fixed;
+    line-height: 1.15em;
+  }
+  .unclaimed{
+    border-color: grey;
+    background-color: lightgray;
+  }
+  .claimed{
+    background-color: var(--secondary-color);
+  }
